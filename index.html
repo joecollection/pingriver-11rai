@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ping Riverside Land · Chiang Mai — Investor Overview | Joe Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f6f1;
+  --bg-soft:#f1ebdb;
+  --card:#ffffff;
+  --border:rgba(21,36,26,0.12);
+  --border-soft:rgba(21,36,26,0.07);
+
+  --forest:#0c2a20;
+  --forest-mid:#15402f;
+  --ivory:#182219;
+  --platinum:#4a5449;
+  --slate:#7c8579;
+
+  --onDark:#f4f1e8;
+  --onDark-mid:#c6d6cb;
+
+  --gold:#b8863a;
+  --gold-light:#93691c;
+  --gold-onDark:#e3c479;
+
+  --electric:#166a52;
+  --teal:#166a52;
+  --concrete:#8f958c;
+  --green:#1a7a52;
+  --green-light:#0c7a48;
+  --red-flag:#b23a24;
+}
+*{box-sizing:border-box; margin:0; padding:0; min-width:0;}
+html{overflow-x:hidden; width:100%;}
+body{
+  font-family:'Inter',sans-serif; background:var(--bg); color:var(--ivory); line-height:1.6;
+  overflow-x:hidden; width:100%; max-width:100vw;
+  overflow-wrap:break-word; word-break:break-word;
+}
+a{color:inherit; overflow-wrap:break-word; word-break:break-word;}
+img,svg{max-width:100%; height:auto;}
+h1,h2,h3,.serif-display{font-family:'Cormorant Garamond',serif;}
+.data-serif{font-family:'Libre Baskerville',serif;}
+.wrap{max-width:1080px; margin:0 auto; padding:0 18px;}
+section{padding:54px 0 8px;}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:9999;
+  background:rgba(248,246,241,0.94); backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:13px 14px; box-shadow:0 1px 0 rgba(21,36,26,0.03); gap:8px;
+}
+.nav-left{font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(13px,4.6vw,19px); letter-spacing:0.8px; color:var(--forest); flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.nav-right{font-size:10px; color:var(--slate); text-align:right; line-height:1.5; flex:0 1 auto; padding-left:6px; white-space:nowrap; min-width:0; overflow:hidden; text-overflow:ellipsis;}
+.nav-right b{color:var(--ivory);}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative; padding:86px 0 46px;
+  background:
+    radial-gradient(ellipse 900px 500px at 12% -10%, rgba(227,196,121,0.10), transparent 60%),
+    radial-gradient(ellipse 700px 420px at 100% 0%, rgba(22,106,82,0.35), transparent 55%),
+    linear-gradient(160deg, var(--forest) 0%, var(--forest-mid) 120%);
+}
+/* --- 3-block image grid (per reference layout: 1 large left + 2 stacked right) --- */
+.hero-imggrid{
+  display:grid; grid-template-columns:1.5fr 1fr; grid-template-rows:1fr 1fr;
+  gap:8px; height:230px; margin-bottom:18px;
+}
+.himg{
+  position:relative; border-radius:10px; overflow:hidden;
+  border:1px solid rgba(227,196,121,0.28);
+  background:
+    linear-gradient(155deg, rgba(227,196,121,0.14), rgba(12,42,32,0.4)),
+    repeating-linear-gradient(45deg, rgba(244,241,232,0.05) 0 2px, transparent 2px 14px),
+    linear-gradient(200deg, #1c4433, #0c2a20);
+  display:flex; align-items:flex-end; padding:12px;
+}
+.himg.large{grid-row:1 / 3;}
+.himg-tag{
+  font-size:9.5px; letter-spacing:1.4px; text-transform:uppercase; font-weight:700;
+  color:var(--gold-onDark); background:rgba(12,42,32,0.55); border:1px solid rgba(227,196,121,0.35);
+  border-radius:5px; padding:5px 9px; backdrop-filter:blur(2px);
+}
+.himg-icon{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-58%);
+  font-size:26px; color:rgba(227,196,121,0.4); font-family:'Cormorant Garamond',serif; font-style:italic;
+}
+@media(max-width:480px){.hero-imggrid{height:210px;}}
+
+.hero-gps{
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  background:rgba(244,241,232,0.06); border:1px solid rgba(227,196,121,0.3);
+  border-radius:9px; padding:11px 14px; margin-bottom:22px;
+}
+.hero-gps .pin{
+  width:26px; height:26px; border-radius:50%; background:rgba(227,196,121,0.16);
+  border:1px solid rgba(227,196,121,0.45); display:flex; align-items:center; justify-content:center;
+  font-size:13px; color:var(--gold-onDark); flex:0 0 auto;
+}
+.hero-gps a{
+  color:var(--gold-onDark); font-size:12.5px; font-weight:700; text-decoration:none;
+  letter-spacing:0.3px; border-bottom:1px solid rgba(227,196,121,0.4); padding-bottom:1px;
+}
+.hero-gps .coords{color:var(--onDark-mid); font-size:11.5px; font-family:'Libre Baskerville',serif;}
+
+.hero-eyebrow{color:var(--gold-onDark); font-size:12px; letter-spacing:3px; font-weight:700; text-transform:uppercase; margin-bottom:12px;}
+.hero-title{font-family:'Cormorant Garamond',serif; font-size:clamp(28px,7vw,48px); font-weight:600; line-height:1.1; color:var(--onDark); max-width:820px;}
+.hero-title em{font-style:italic; color:var(--gold-onDark);}
+.hero-sub{color:var(--onDark-mid); font-size:14.5px; margin-top:14px; max-width:640px;}
+.hero-tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;}
+.hero-tag{border:1px solid rgba(227,196,121,0.35); color:var(--onDark-mid); font-size:10.5px; padding:6px 11px; border-radius:20px; letter-spacing:0.3px;}
+
+/* ---------- SHARED ---------- */
+.section-label{font-size:11px; letter-spacing:3px; color:var(--gold-light); font-weight:700; text-transform:uppercase; margin-bottom:8px;}
+.section-title{font-family:'Cormorant Garamond',serif; font-size:clamp(24px,5vw,34px); font-weight:600; color:var(--forest); margin-bottom:22px; line-height:1.15;}
+.hairline{height:1px; background:linear-gradient(90deg, rgba(184,134,58,0.45), transparent); margin:8px 0 30px;}
+
+.kpi-ribbon{display:grid; grid-template-columns:repeat(2,1fr); border:1px solid var(--border); border-radius:10px; overflow:hidden; background:var(--border-soft);}
+.kpi-cell{background:var(--card); padding:18px 14px;}
+.kpi-label{font-size:9.5px; letter-spacing:1.5px; color:var(--slate); text-transform:uppercase; margin-bottom:6px;}
+.kpi-value{font-family:'Libre Baskerville',serif; font-size:clamp(13.5px,3.4vw,18px); color:var(--forest); font-weight:700;}
+@media(min-width:520px){.kpi-ribbon{grid-template-columns:repeat(4,1fr);}}
+
+.two-col{display:grid; grid-template-columns:1fr; gap:26px;}
+@media(min-width:700px){.two-col{grid-template-columns:1fr 1fr;}}
+
+.chip-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:9px;}
+.chip{background:var(--card); border:1px solid var(--border); border-radius:8px; padding:12px 14px; box-shadow:0 1px 2px rgba(21,36,26,0.03);}
+.chip-k{font-size:9.5px; letter-spacing:1.2px; color:var(--slate); text-transform:uppercase; margin-bottom:4px;}
+.chip-v{font-size:13px; color:var(--ivory); font-weight:600;}
+
+.callout{border-radius:8px; padding:18px 20px; margin:18px 0; border-left:3px solid; background:var(--card); box-shadow:0 1px 2px rgba(21,36,26,0.03);}
+.callout-gold{border-color:var(--gold);}
+.callout-teal{border-color:var(--teal);}
+.callout-green{border-color:var(--green);}
+.callout-red{border-color:var(--red-flag);}
+.callout-title{font-size:10.5px; letter-spacing:1.5px; text-transform:uppercase; font-weight:700; margin-bottom:8px; color:var(--gold-light);}
+.callout-teal .callout-title{color:var(--teal);}
+.callout-green .callout-title{color:var(--green-light);}
+.callout-red .callout-title{color:var(--red-flag);}
+.callout-body{font-size:13.3px; color:var(--platinum); line-height:1.75;}
+.callout-body i{color:var(--ivory); font-style:italic;}
+.callout-body b{color:var(--ivory);}
+
+.stat-row{display:flex; justify-content:space-between; flex-wrap:wrap; gap:4px; padding:10px 0; border-bottom:1px solid var(--border-soft);}
+.stat-row:last-child{border-bottom:none;}
+.stat-k{font-size:12.5px; color:var(--platinum);}
+.stat-v{font-size:12.5px; color:var(--forest); font-weight:700; font-family:'Libre Baskerville',serif; white-space:nowrap;}
+
+.map-card{margin-top:16px; border:1px solid var(--border); border-radius:9px; padding:14px 16px; background:var(--card); display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+.map-card a{color:var(--teal); font-weight:700; font-size:12.5px; text-decoration:none; border-bottom:1px solid rgba(22,106,82,0.35);}
+
+/* ---------- SCENARIOS ---------- */
+.scenario-grid{display:grid; grid-template-columns:1fr; gap:16px;}
+@media(min-width:700px){.scenario-grid{grid-template-columns:1fr 1fr;}}
+.scenario-card{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:22px; box-shadow:0 2px 14px rgba(21,36,26,0.04); position:relative;}
+.scenario-card.best{border:1px solid var(--gold); box-shadow:0 0 0 1px rgba(184,134,58,0.25), 0 10px 30px rgba(184,134,58,0.12);}
+.badge-best{position:absolute; top:-11px; right:18px; background:var(--gold); color:#fff; font-size:9.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:5px 10px; border-radius:20px;}
+.scenario-name{font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:600; color:var(--forest); margin-bottom:8px;}
+.scenario-desc{font-size:12.6px; color:var(--platinum); line-height:1.6; margin-bottom:14px;}
+.scenario-metrics{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px;}
+.metric-k{font-size:9px; letter-spacing:1px; color:var(--slate); text-transform:uppercase;}
+.metric-v{font-size:14px; color:var(--gold-light); font-weight:700; font-family:'Libre Baskerville',serif;}
+.risk-tag{display:inline-block; font-size:10px; font-weight:700; padding:4px 10px; border-radius:20px; letter-spacing:0.5px;}
+.risk-low{background:rgba(26,122,82,0.10); color:var(--green-light);}
+.risk-med{background:rgba(184,134,58,0.14); color:var(--gold-light);}
+.risk-high{background:rgba(178,58,36,0.10); color:#a3341f;}
+
+/* ---------- TABLES ---------- */
+.table-wrap{overflow-x:auto; border:1px solid var(--border); border-radius:10px; background:var(--card); box-shadow:0 2px 14px rgba(21,36,26,0.04); -webkit-overflow-scrolling:touch;}
+table{border-collapse:collapse; width:100%; min-width:560px;}
+thead th{padding:12px 14px; font-size:10.5px; white-space:nowrap; text-align:left; background:var(--gold); color:#fff; letter-spacing:0.5px; text-transform:uppercase;}
+tbody td{padding:11px 14px; font-size:12.3px; white-space:nowrap; color:var(--platinum); border-bottom:1px solid var(--border-soft); font-family:'Libre Baskerville',serif;}
+tbody td:first-child{font-family:'Inter',sans-serif; color:var(--ivory); font-weight:600;}
+tbody tr:hover{background:rgba(184,134,58,0.05);}
+tfoot td{padding:12px 14px; font-size:11.5px; font-family:'Inter',sans-serif; color:var(--slate); background:var(--bg-soft); font-style:italic;}
+.swipe-hint{text-align:center; font-size:10px; color:var(--slate); padding:8px 0 2px; letter-spacing:0.5px;}
+.tier-subject td:first-child{color:var(--gold-light); font-weight:700;}
+.tag-subject{background:rgba(184,134,58,0.18); color:var(--gold-light); padding:3px 9px; border-radius:20px; font-size:10px; font-weight:700;}
+.tag-comp{background:rgba(22,106,82,0.12); color:var(--teal); padding:3px 9px; border-radius:20px; font-size:10px; font-weight:700;}
+.tag-dev{background:rgba(26,122,82,0.12); color:var(--green-light); padding:3px 9px; border-radius:20px; font-size:10px; font-weight:700;}
+@media(max-width:480px){
+  table{min-width:500px;}
+  thead th{padding:10px 10px; font-size:9.5px;}
+  tbody td{padding:9px 10px; font-size:11.5px;}
+}
+
+/* ---------- WATERFALL / BARS ---------- */
+.wf-row{margin-bottom:13px;}
+.wf-label{display:flex; justify-content:space-between; font-size:11.5px; color:var(--platinum); margin-bottom:5px;}
+.wf-label b{color:var(--forest); font-family:'Libre Baskerville',serif; font-weight:700;}
+.wf-track{height:9px; border-radius:5px; background:var(--border-soft); overflow:hidden;}
+.wf-fill{height:100%; border-radius:5px;}
+.wf-gdv{background:linear-gradient(90deg,var(--electric),#2a9877);}
+.wf-cost{background:var(--concrete);}
+.wf-green{background:linear-gradient(90deg,var(--green),var(--green-light));}
+.wf-gold{background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+
+/* sensitivity rows (mobile-safe) */
+.sens-row{display:grid; grid-template-columns:minmax(74px,96px) 1fr minmax(78px,104px); align-items:center; gap:6px; margin-bottom:12px;}
+.sens-label{font-size:10.5px; color:var(--platinum); overflow-wrap:break-word; line-height:1.3;}
+.sens-val{font-family:'Libre Baskerville',serif; font-size:10px; color:var(--forest); text-align:right; white-space:normal; line-height:1.3; overflow-wrap:break-word;}
+.sens-track{height:7px; border-radius:4px; background:var(--border-soft); position:relative; overflow:hidden;}
+.sens-fill{position:absolute; top:0; bottom:0; background:linear-gradient(90deg,var(--electric),var(--gold));}
+
+/* ---------- ROADMAP ---------- */
+.roadmap{margin-top:6px;}
+.phase{border-left:2px solid rgba(184,134,58,0.3); padding-left:26px; padding-bottom:30px; position:relative;}
+.phase:last-child{padding-bottom:4px;}
+.phase-dot{position:absolute; left:-7px; top:2px; width:12px; height:12px; border-radius:50%; background:var(--card); border:2px solid var(--gold);}
+.phase-dot.final{background:var(--gold); box-shadow:0 0 14px 4px rgba(184,134,58,0.45);}
+.phase-time{font-size:10px; letter-spacing:1.2px; color:var(--slate); text-transform:uppercase; margin-bottom:4px;}
+.phase-title{font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:600; color:var(--forest); margin-bottom:6px;}
+.phase-desc{font-size:12.5px; color:var(--platinum); line-height:1.65;}
+
+/* ---------- LOCATION CARDS ---------- */
+.loc-grid{display:grid; grid-template-columns:1fr; gap:14px;}
+@media(min-width:480px){.loc-grid{grid-template-columns:1fr 1fr;}}
+.loc-card{background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px; box-shadow:0 1px 2px rgba(21,36,26,0.03);}
+.loc-name{font-family:'Cormorant Garamond',serif; font-weight:600; font-size:16.5px; color:var(--forest); margin-bottom:4px;}
+.loc-dist{font-size:11px; color:var(--gold-light); font-weight:700; margin-bottom:8px;}
+.score-row{display:flex; align-items:center; gap:8px; margin-top:8px;}
+.score-track{flex:1; height:6px; border-radius:4px; background:var(--border-soft); overflow:hidden;}
+.score-fill{height:100%; background:linear-gradient(90deg,var(--electric),var(--gold)); border-radius:3px;}
+.score-num{font-size:11px; font-family:'Libre Baskerville',serif; color:var(--forest); font-weight:700;}
+
+/* ---------- DEAL BOX ---------- */
+.deal-box{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:30px 26px; box-shadow:0 4px 24px rgba(21,36,26,0.06);}
+.deal-headline{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(18px,4.2vw,24px); color:var(--forest); line-height:1.4; margin-bottom:20px;}
+.ask-wrap{margin-bottom:18px;}
+.ask-label{font-size:10.5px; letter-spacing:1.5px; text-transform:uppercase; color:var(--slate); margin-bottom:4px;}
+.ask-price{font-family:'Libre Baskerville',serif; font-size:clamp(28px,8vw,42px); color:var(--green-light); font-weight:700;}
+.ask-sub{font-size:12px; color:var(--platinum); margin-top:2px;}
+.deal-thesis p{font-size:13px; color:var(--platinum); line-height:1.75; margin-bottom:12px;}
+.pill-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
+.pill{background:rgba(184,134,58,0.10); border:1px solid rgba(184,134,58,0.35); color:var(--gold-light); font-size:10.8px; padding:6px 13px; border-radius:20px; font-weight:600;}
+
+/* ---------- CONTACT ---------- */
+.contact-strip{background:var(--forest); padding:44px 0; margin-top:20px;}
+.contact-grid{display:grid; grid-template-columns:1fr; gap:20px;}
+@media(min-width:640px){.contact-grid{grid-template-columns:1fr 1fr 1fr; min-width:640px;}}
+.contact-name{font-size:16px; font-weight:700; color:var(--onDark);}
+.contact-role, .contact-line{color:var(--onDark-mid); font-size:12.5px; margin-top:3px;}
+.wordmark{font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--gold-onDark); letter-spacing:2px;}
+.link-btn{
+  display:block; text-decoration:none;
+  border:1px solid rgba(227,196,121,0.55); border-radius:8px;
+  padding:12px 16px; margin-top:12px;
+  color:var(--gold-onDark); font-size:13px; font-weight:700;
+  transition:background 0.2s ease, border-color 0.2s ease;
+}
+.link-btn:hover{background:rgba(227,196,121,0.08); border-color:var(--gold-onDark);}
+.link-btn .arrow{margin-left:4px;}
+
+.disclaimer{font-size:9.5px; color:var(--slate); text-align:center; padding:26px 18px 50px; max-width:760px; margin:0 auto; line-height:1.8; background:var(--bg);}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<div class="nav">
+  <div class="nav-left">JOE COLLECTION</div>
+  <div class="nav-right">JOE · +66 80-657-8387<br><b>joecollection.m@gmail.com</b></div>
+</div>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+
+    <!-- 3-image placeholder block (large left + 2 stacked right, per reference layout) -->
+    <div class="hero-imggrid">
+      <div class="himg large">
+        <div class="himg-icon">✦</div>
+        <span class="himg-tag">Aerial · 140m Ping River Frontage</span>
+      </div>
+      <div class="himg">
+        <div class="himg-icon">✦</div>
+        <span class="himg-tag">Site View · Toward Centara Riverside</span>
+      </div>
+      <div class="himg">
+        <div class="himg-icon">✦</div>
+        <span class="himg-tag">Ground View · River Access Point</span>
+      </div>
+    </div>
+    <!-- Photography placeholders — replace each .himg block background with actual site imagery -->
+
+    <!-- GPS location block -->
+    <div class="hero-gps">
+      <span class="pin">📍</span>
+      <a href="https://maps.app.goo.gl/NnURjR64wcQ3oicMA" target="_blank" rel="noopener">View Exact Location on Google Maps →</a>
+      <span class="coords">18.763876°N, 99.002670°E · Ping Riverfront, Mueang Chiang Mai</span>
+    </div>
+
+    <div class="hero-eyebrow">Chiang Mai · Ping Riverfront · Freehold Land</div>
+    <h1 class="hero-title">A 140-Metre Riverfront Canvas for <em>Wellness, Villas &amp; Legacy Living</em> on the Ping</h1>
+    <p class="hero-sub">11-3-49 Rai (18,196 Sq.m.) of freehold Chanote land directly on the Ping River, opposite Centara Riverside Hotel Chiang Mai and adjoining the Senior Wellness Center — positioned for a High-End Pool Villa, Branded Residence &amp; Medical Recovery Retreat development.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Freehold Chanote</span>
+      <span class="hero-tag">140m River Frontage</span>
+      <span class="hero-tag">Red Zone · Por.5-19</span>
+      <span class="hero-tag">FAR 7:1</span>
+      <span class="hero-tag">Opposite Centara Riverside</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 01 · ASSET AT A GLANCE ============ -->
+<section class="wrap">
+  <div class="section-label">01 · Asset at a Glance</div>
+  <div class="section-title">Ping Riverside Land, Chiang Mai</div>
+  <div class="hairline"></div>
+  <div class="kpi-ribbon">
+    <div class="kpi-cell"><div class="kpi-label">Land Area</div><div class="kpi-value">11-3-49 Rai (18,196 Sq.m.)</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Tenure</div><div class="kpi-value">Freehold — Chanote</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Zoning</div><div class="kpi-value">Red — High-Density Residential (Por.5-19)</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Max FAR</div><div class="kpi-value">7 : 1*</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Max Height</div><div class="kpi-value">12 m (≈3 floors)</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Est. GDV (Base Case)</div><div class="kpi-value">฿4.20 Billion</div></div>
+    <div class="kpi-cell"><div class="kpi-label">River Frontage</div><div class="kpi-value">140 m along the Ping</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Asking Price</div><div class="kpi-value">฿425M (฿100,000/Sq.Wah)</div></div>
+  </div>
+  <div class="callout callout-gold">
+    <div class="callout-title">Read This First — FAR vs. Height Cap</div>
+    <div class="callout-body">*The <i>nominal</i> 7:1 FAR entitlement implies up to 127,372 Sq.m. of buildable area — but the 12-metre height restriction physically caps realistic construction at roughly 3 floors. Effective achievable GFA is approximately <b>38,000–46,000 Sq.m.</b>, or only ~30–36% of the nominal FAR ceiling. See Section 07 for the full valuation impact of this constraint.</div>
+  </div>
+</section>
+
+<!-- ============ 02 · LAND OVERVIEW & LOCATION ============ -->
+<section class="wrap">
+  <div class="section-label">02 · Land Overview &amp; Location</div>
+  <div class="section-title">Riverfront Position, Freehold Title</div>
+  <div class="hairline"></div>
+  <div class="two-col">
+    <div>
+      <div class="chip-grid">
+        <div class="chip"><div class="chip-k">Land Size</div><div class="chip-v">11-3-49 Rai / 18,196 Sq.m.</div></div>
+        <div class="chip"><div class="chip-k">Frontage</div><div class="chip-v">140 m on Ping River</div></div>
+        <div class="chip"><div class="chip-k">Title Type</div><div class="chip-v">Chanote (Freehold)</div></div>
+        <div class="chip"><div class="chip-k">Zoning Colour</div><div class="chip-v">Red — Por.5-19</div></div>
+        <div class="chip"><div class="chip-k">Max FAR</div><div class="chip-v">7:1 (height-capped)</div></div>
+        <div class="chip"><div class="chip-k">Max Height</div><div class="chip-v">12 metres</div></div>
+        <div class="chip"><div class="chip-k">Coverage Ratio</div><div class="chip-v">70% resi / 80% non-resi</div></div>
+        <div class="chip"><div class="chip-k">Current Use</div><div class="chip-v">Vacant riverfront land</div></div>
+      </div>
+      <div class="callout callout-gold">
+        <div class="callout-title">Freehold &amp; FAR Story</div>
+        <div class="callout-body">A single-titled, freehold Chanote riverfront parcel of this size (140m of unbroken Ping River frontage) is rare within Mueang Chiang Mai — most riverside holdings in this submarket are fragmented across multiple smaller titles. The Red Por.5-19 classification is Chiang Mai's highest-density residential designation, but <b>height, not FAR, is the binding constraint</b> — see Section 01 and Section 07.</div>
+      </div>
+    </div>
+    <div>
+      <div class="stat-row"><span class="stat-k">Opposite</span><span class="stat-v">Centara Riverside Hotel Chiang Mai</span></div>
+      <div class="stat-row"><span class="stat-k">Adjacent</span><span class="stat-v">Senior Wellness Center Chiang Mai</span></div>
+      <div class="stat-row"><span class="stat-k">Nearby Healthcare</span><span class="stat-v">Rajavej Chiang Mai Hospital</span></div>
+      <div class="stat-row"><span class="stat-k">Submarket</span><span class="stat-v">Ping Riverfront, Mueang Chiang Mai</span></div>
+      <div class="stat-row"><span class="stat-k">River</span><span class="stat-v">Mae Ping (Ping River)</span></div>
+      <div class="stat-row"><span class="stat-k">District Land Price Premium</span><span class="stat-v">~3.3x Mueang CM median</span></div>
+      <div class="callout callout-teal">
+        <div class="callout-title">Sub-Market Land Price Trend</div>
+        <div class="callout-body">The Mueang Chiang Mai district median land price sits near ฿28,740/Sq.Wah, while riverfront parcels command a substantial scarcity premium — a directly comparable Wat Ket riverfront plot transacted/listed at exactly <b>฿100,000/Sq.Wah</b> in the same submarket, matching this asset's asking price. See Section 05.</div>
+      </div>
+      <div class="map-card">
+        <span class="stat-k">GPS: 18.763876, 99.002670</span>
+        <a href="https://maps.app.goo.gl/NnURjR64wcQ3oicMA" target="_blank" rel="noopener">Open in Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · DEVELOPMENT SCENARIO ANALYSIS ============ -->
+<section class="wrap">
+  <div class="section-label">03 · Development Scenario Analysis</div>
+  <div class="section-title">Four Paths to Value</div>
+  <div class="hairline"></div>
+  <div class="scenario-grid">
+    <div class="scenario-card">
+      <div class="scenario-name">1 · Land Bank &amp; Hold</div>
+      <div class="scenario-desc">Hold freehold title while confirming FAR/height entitlement, EIA pathway and river-setback rulings with Chiang Mai City Planning Office, then resell to an institutional developer or wellness operator with a cleared entitlement file.</div>
+      <div class="scenario-metrics">
+        <div><div class="metric-k">Hold Period</div><div class="metric-v">18–36 mo</div></div>
+        <div><div class="metric-k">Target Exit Uplift</div><div class="metric-v">15–25%</div></div>
+      </div>
+      <span class="risk-tag risk-low">Low Risk</span>
+    </div>
+    <div class="scenario-card best">
+      <span class="badge-best">★ Recommended</span>
+      <div class="scenario-name">2 · Pool Villa Estate + Branded Residences</div>
+      <div class="scenario-desc">18–24 branded riverfront pool villas across ~50–60% of the height-capped GFA, preserving large private lots and river outlook. Highest ASP per Sq.m., phased progressive sales, naturally matches the 12m low-rise cap.</div>
+      <div class="scenario-metrics">
+        <div><div class="metric-k">Est. GDV</div><div class="metric-v">฿3.8–4.6B</div></div>
+        <div><div class="metric-k">Dev. Margin</div><div class="metric-v">28–32%</div></div>
+      </div>
+      <span class="risk-tag risk-med">Medium Risk</span>
+    </div>
+    <div class="scenario-card">
+      <div class="scenario-name">3 · Branded Residences + Wellness Medical Retreat</div>
+      <div class="scenario-desc">Full utilisation of the height-capped GFA (~40,000 Sq.m.) blending branded residences with a medical/cosmetic recovery wellness center under a global or regional operator HMA — this is the Base Case financial model in Section 07.</div>
+      <div class="scenario-metrics">
+        <div><div class="metric-k">Est. GDV</div><div class="metric-v">฿4.20B</div></div>
+        <div><div class="metric-k">RLV (Base Case)</div><div class="metric-v">฿599M</div></div>
+      </div>
+      <span class="risk-tag risk-med">Medium Risk</span>
+    </div>
+    <div class="scenario-card">
+      <div class="scenario-name">4 · Maximum-Density Low-Rise Development</div>
+      <div class="scenario-desc">Push full 70–80% site coverage across 3 floors for maximum unit count; lower ASP per unit due to density but higher absolute unit volume — positioned for bulk sale or institutional/REIT-style exit.</div>
+      <div class="scenario-metrics">
+        <div><div class="metric-k">Est. GDV</div><div class="metric-v">฿4.9–5.4B</div></div>
+        <div><div class="metric-k">Dev. Margin</div><div class="metric-v">22–26%</div></div>
+      </div>
+      <span class="risk-tag risk-high">Higher Risk</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · GDV MODEL & FINANCIAL COMPARISON ============ -->
+<section class="wrap">
+  <div class="section-label">04 · GDV Model &amp; Financial Comparison</div>
+  <div class="section-title">Scenario Financial Summary</div>
+  <div class="hairline"></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Scenario</th><th>Achievable GFA</th><th>Sellable Area</th><th>Blended ASP</th><th>Est. GDV</th><th>Dev. Margin</th><th>Indicative RLV</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1 · Land Bank &amp; Hold</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr>
+        <tr><td>2 · Pool Villa Estate ★</td><td>~22,000 Sq.m.</td><td>~16,500 Sq.m.</td><td>฿170,000/Sq.m.</td><td>฿2.81B</td><td>30%</td><td>฿0.55–0.75B</td></tr>
+        <tr><td>3 · Branded Res. + Wellness</td><td>~40,000 Sq.m.</td><td>~30,000 Sq.m.</td><td>฿140,000/Sq.m.</td><td>฿4.20B</td><td>28%</td><td>฿0.60B</td></tr>
+        <tr><td>4 · Max-Density Mixed</td><td>~46,000 Sq.m.</td><td>~35,900 Sq.m.</td><td>฿120,000/Sq.m.</td><td>฿4.31B</td><td>25%</td><td>฿0.50–0.65B</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="7">All figures indicative, pre-feasibility. GFA capped by the 12m height restriction, not the nominal 7:1 FAR — see Section 01 &amp; 07. ASP assumptions require validation against a full market feasibility study.</td></tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="swipe-hint">← swipe to view full table →</div>
+</section>
+
+<!-- ============ 05 · COMPARABLE LAND TRANSACTIONS ============ -->
+<section class="wrap">
+  <div class="section-label">05 · Comparable Land Transactions</div>
+  <div class="section-title">Benchmarking Against the Sub-Market</div>
+  <div class="hairline"></div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Tag</th><th>Property</th><th>Size (Sq.Wah)</th><th>Price/Sq.Wah</th><th>Total Price</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr class="tier-subject"><td><span class="tag-subject">SUBJECT</span></td><td>Ping Riverside Land</td><td>4,549</td><td>฿100,000</td><td>฿425,000,000</td><td>140m river frontage, asking price</td></tr>
+        <tr><td><span class="tag-comp">COMP</span></td><td>Wat Ket Riverfront, Ping River</td><td>1,755</td><td>฿100,000</td><td>฿175,500,000</td><td>75m frontage, same riverfront submarket</td></tr>
+        <tr><td><span class="tag-comp">COMP</span></td><td>Huai Kaeo Road, Mueang CM</td><td>888.7</td><td>฿200,000</td><td>฿177,740,000</td><td>Inland CBD commercial, red zone, no river</td></tr>
+        <tr><td><span class="tag-comp">COMP</span></td><td>Mueang Chiang Mai District Median</td><td>—</td><td>฿28,740</td><td>—</td><td>All-land district median (reference baseline)</td></tr>
+        <tr><td><span class="tag-dev">DEV ASP</span></td><td>Riverside Condominium (built product)</td><td>—</td><td>≈฿42,000–49,000/Sq.m.</td><td>—</td><td>Standard riverside condo ASP, GFA basis not land</td></tr>
+        <tr><td><span class="tag-dev">DEV ASP</span></td><td>Prime Riverside Segment (high-end)</td><td>—</td><td>฿80,000–110,000+/Sq.m.</td><td>—</td><td>High-end riverside built product benchmark</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="6">Subject asking price sits exactly at the closest direct comparable (Wat Ket riverfront, same submarket) and ~3.3x the district-wide land median — consistent with a genuine riverfront scarcity premium, not an outlier ask.</td></tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="swipe-hint">← swipe to view full table →</div>
+  <div class="callout callout-red">
+    <div class="callout-title">Data Integrity Flag</div>
+    <div class="callout-body">Two figures in the seller's data do not fully reconcile: (1) 11-3-49 Rai converts to ~18,996 Sq.m. under standard Rai-Ngan-Wah conversion, versus the 18,196 Sq.m. stated — a ~4% variance; and (2) ฿425,000,000 ÷ 4,549 Sq.Wah (based on the stated 18,196 Sq.m.) computes to ~฿93,428/Sq.Wah, not the quoted ฿100,000/Sq.Wah. Neither discrepancy is disqualifying, but both should be resolved via a formal land survey before final underwriting.</div>
+  </div>
+</section>
+
+<!-- ============ 06 · MARKET INTELLIGENCE ============ -->
+<section class="wrap">
+  <div class="section-label">06 · Market Intelligence</div>
+  <div class="section-title">Chiang Mai Wellness &amp; Riverside Demand</div>
+  <div class="hairline"></div>
+  <div class="two-col">
+    <div>
+      <div class="stat-row"><span class="stat-k">City-Centre Condo ASP</span><span class="stat-v">฿60,000–115,000/Sq.m.</span></div>
+      <div class="stat-row"><span class="stat-k">Prime Riverside ASP</span><span class="stat-v">฿80,000–110,000+/Sq.m.</span></div>
+      <div class="stat-row"><span class="stat-k">Condo Price Appreciation</span><span class="stat-v">~2.5–5% p.a.</span></div>
+      <div class="stat-row"><span class="stat-k">Wellness Sector Size (2028E)</span><span class="stat-v">฿15–20B (base case)</span></div>
+      <div class="stat-row"><span class="stat-k">Wellness Sector Size (2030 upside)</span><span class="stat-v">Up to ฿40B</span></div>
+      <div class="stat-row"><span class="stat-k">Foreign Buyer Quota</span><span class="stat-v">49% (condo, per unit area)</span></div>
+    </div>
+    <div class="callout callout-teal">
+      <div class="callout-title">Structural Demand Drivers</div>
+      <div class="callout-body">
+      1. Destination Thailand Visa (DTV) enabling 5-year remote-work stays is driving demand for long-stay wellness residences.<br>
+      2. Rising foreign buyer share (China, Europe, North America) supporting prime and riverside segments.<br>
+      3. Scarcity of large contiguous freehold riverfront parcels within Mueang Chiang Mai limits comparable new supply.<br>
+      4. Adjacency to Rajavej Hospital and an existing Senior Wellness Center pre-validates the site for a medical/wellness-anchored concept.<br>
+      5. Institutional interest in "Healthy City" branded villas and wellness condos, commanding premiums over standard product.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 · LAND VALUATION ANALYSIS ============ -->
+<section class="wrap">
+  <div class="section-label">07 · Land Valuation Analysis</div>
+  <div class="section-title">Residual Land Value — Base Case</div>
+  <div class="hairline"></div>
+  <div class="two-col">
+    <div>
+      <div class="wf-row">
+        <div class="wf-label"><span>Gross Development Value</span><b>฿4,200M</b></div>
+        <div class="wf-track"><div class="wf-fill wf-gdv" style="width:100%"></div></div>
+      </div>
+      <div class="wf-row">
+        <div class="wf-label"><span>Less: Construction Cost</span><b>฿2,080M</b></div>
+        <div class="wf-track"><div class="wf-fill wf-cost" style="width:49%"></div></div>
+      </div>
+      <div class="wf-row">
+        <div class="wf-label"><span>Less: Soft Costs (10%)</span><b>฿208M</b></div>
+        <div class="wf-track"><div class="wf-fill wf-cost" style="width:5%"></div></div>
+      </div>
+      <div class="wf-row">
+        <div class="wf-label"><span>Less: Finance Cost</span><b>฿137M</b></div>
+        <div class="wf-track"><div class="wf-fill wf-cost" style="width:3%"></div></div>
+      </div>
+      <div class="wf-row">
+        <div class="wf-label"><span>Less: Developer Margin (28%)</span><b>฿1,176M</b></div>
+        <div class="wf-track"><div class="wf-fill wf-gold" style="width:28%"></div></div>
+      </div>
+      <div class="wf-row">
+        <div class="wf-label"><span><b>Residual Land Value (Base Case)</b></span><b>฿599M</b></div>
+        <div class="wf-track"><div class="wf-fill wf-green" style="width:14%"></div></div>
+      </div>
+      <div class="callout callout-green">
+        <div class="callout-title">Base Case vs. Asking</div>
+        <div class="callout-body">Base Case RLV of ฿599M sits ~41% above the ฿425M asking price — a healthy but not extreme cushion, anchored on a height-capped GFA of ~40,000 Sq.m. and a ฿140,000/Sq.m. blended ASP. <b>This cushion depends materially on achieving the assumed GFA and ASP — see the Conservative case in Section 08, which does not clear the asking price.</b></div>
+      </div>
+    </div>
+    <div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Item</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Treasury Appraisal (indicative)</td><td>Unconfirmed — pending</td></tr>
+            <tr><td>Typ. Appraisal-to-Market Ratio</td><td>~30–45% (Mueang CM prime)</td></tr>
+            <tr><td>Asking Price / Sq.Wah</td><td>฿100,000 (seller-stated)</td></tr>
+            <tr><td>Recomputed Price / Sq.Wah</td><td>~฿93,428</td></tr>
+            <tr><td>Comp Match (Wat Ket)</td><td>฿100,000/Sq.Wah</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="swipe-hint">← swipe to view full table →</div>
+      <div class="callout callout-gold" style="margin-top:16px;">
+        <div class="callout-title">Per-Unit Pricing Matrix (Illustrative)</div>
+        <div class="callout-body">
+        Standard riverside condo ASP: ฿80,000–110,000/Sq.m.<br>
+        Branded pool villa premium: ฿150,000–200,000/Sq.m.<br>
+        Wellness-branded residence: ฿130,000–170,000/Sq.m.<br>
+        <i>Base Case blended ASP of ฿140,000/Sq.m. sits within this range but above the standard condo comp set — requires validation via a dedicated feasibility/market study before final underwriting.</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 · DEVELOPMENT FEASIBILITY MODEL ============ -->
+<section class="wrap">
+  <div class="section-label">08 · Development Feasibility Model</div>
+  <div class="section-title">Conservative / Base / Upside</div>
+  <div class="hairline"></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Case</th><th>Achievable GFA</th><th>Blended ASP</th><th>Construction /Sq.m.</th><th>Est. GDV</th><th>Dev. Margin</th><th>RLV</th><th>vs. ฿425M Ask</th></tr></thead>
+      <tbody>
+        <tr><td>Conservative</td><td>34,000 Sq.m.</td><td>฿125,000</td><td>฿55,000</td><td>฿3,188M</td><td>30%</td><td>~฿24M</td><td style="color:#a3341f;">Does NOT clear ask</td></tr>
+        <tr><td>Base Case</td><td>40,000 Sq.m.</td><td>฿140,000</td><td>฿52,000</td><td>฿4,200M</td><td>28%</td><td>~฿599M</td><td style="color:var(--green-light);">+41% cushion</td></tr>
+        <tr><td>Upside</td><td>46,000 Sq.m.</td><td>฿170,000</td><td>฿48,000</td><td>฿6,100M</td><td>25%</td><td>~฿2,006M</td><td style="color:var(--green-light);">+372% cushion</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="8">Conservative case reflects a realistic downside where achievable GFA sits at the low end of the height-cap range and ASP execution falls to standard-condo levels — under this case, RLV does not comfortably support the ฿425M ask.</td></tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="swipe-hint">← swipe to view full table →</div>
+
+  <div class="callout callout-red" style="margin-top:18px;">
+    <div class="callout-title">Counter-Perspective — This Is Not a One-Way Bet</div>
+    <div class="callout-body">The Base and Upside cases comfortably support the asking price, but the spread between Conservative (~฿24M RLV) and Upside (~฿2,006M RLV) is unusually wide for a land deal — almost entirely because achievable GFA and ASP are both compressed by the 12m height cap and unvalidated ASP assumptions. A buyer should treat this as <b>execution-dependent upside, not guaranteed margin</b>, and commission a full architectural massing study plus market feasibility report before committing capital at ฿425M.</div>
+  </div>
+
+  <div class="two-col" style="margin-top:22px;">
+    <div>
+      <div class="sens-row">
+        <div class="sens-label">ASP ±10%</div>
+        <div class="sens-track"><div class="sens-fill" style="left:20%; width:60%;"></div></div>
+        <div class="sens-val">฿297M–฿901M</div>
+      </div>
+      <div class="sens-row">
+        <div class="sens-label">Construction ±10%</div>
+        <div class="sens-track"><div class="sens-fill" style="left:30%; width:40%;"></div></div>
+        <div class="sens-val">฿370M–฿828M</div>
+      </div>
+      <div class="sens-row">
+        <div class="sens-label">Sales Velocity ±20%</div>
+        <div class="sens-track"><div class="sens-fill" style="left:42%; width:16%;"></div></div>
+        <div class="sens-val">฿544M–฿640M</div>
+      </div>
+      <div class="sens-row">
+        <div class="sens-label">Interest Rate ±1%</div>
+        <div class="sens-track"><div class="sens-fill" style="left:46%; width:8%;"></div></div>
+        <div class="sens-val">฿579M–฿619M</div>
+      </div>
+    </div>
+    <div class="callout callout-gold">
+      <div class="callout-title">Footnote</div>
+      <div class="callout-body">Sensitivities modelled off the Base Case (RLV ฿599M). District ASP references drawn from Mueang Chiang Mai riverside condo listings (2025–26). Finance cost assumes Bank of Thailand policy-linked construction lending; confirm current BOT reference rate before final modelling.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 · DEVELOPMENT RETURNS ROADMAP (full width, never two-col) ============ -->
+<section class="wrap">
+  <div class="section-label">09 · Development Returns Roadmap</div>
+  <div class="section-title">From Acquisition to Exit</div>
+  <div class="hairline"></div>
+  <div class="roadmap">
+    <div class="phase">
+      <div class="phase-dot"></div>
+      <div class="phase-time">Month 0–6</div>
+      <div class="phase-title">Acquisition &amp; Entitlement Confirmation</div>
+      <div class="phase-desc">Chanote transfer, formal land survey to resolve the area discrepancy flagged in Section 05, FAR/height confirmation with the Chiang Mai City Planning Office, river-setback confirmation, EIA pre-consultation.</div>
+    </div>
+    <div class="phase">
+      <div class="phase-dot"></div>
+      <div class="phase-time">Month 6–18</div>
+      <div class="phase-title">Design &amp; Regulatory Approval</div>
+      <div class="phase-desc">Architectural massing for the Pool Villa + Branded Residence + Wellness concept, formal EIA submission (12–18 month parallel track), wellness/medical facility licensing pre-application, brand/operator JV negotiation.</div>
+    </div>
+    <div class="phase">
+      <div class="phase-dot"></div>
+      <div class="phase-time">Month 18–36</div>
+      <div class="phase-title">Construction &amp; Pre-Sales</div>
+      <div class="phase-desc">Phased low-rise construction within the 12m height envelope, branded residence pre-sale launch, wellness/medical center fit-out and licensing finalisation.</div>
+    </div>
+    <div class="phase">
+      <div class="phase-dot final"></div>
+      <div class="phase-time">Month 36–48</div>
+      <div class="phase-title">Completion, Sell-Through &amp; Exit</div>
+      <div class="phase-desc">Practical completion and unit handover, operator management of the wellness/medical component, developer profit realisation with an optional bulk-sale or REIT-style exit for the income-producing elements.</div>
+    </div>
+  </div>
+
+  <div class="table-wrap" style="margin-top:22px;">
+    <table>
+      <thead><tr><th>Scenario</th><th>Timeline</th><th>Indicative IRR</th><th>Indicative MOIC</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Land Bank &amp; Hold</td><td>18–36 mo</td><td>10–15%</td><td>1.2–1.4x</td></tr>
+        <tr><td>2 · Pool Villa Estate ★</td><td>36–48 mo</td><td>22–28%</td><td>1.9–2.4x</td></tr>
+        <tr><td>3 · Branded Res. + Wellness</td><td>42–48 mo</td><td>18–24%</td><td>1.7–2.1x</td></tr>
+        <tr><td>4 · Max-Density Mixed</td><td>36–42 mo</td><td>16–20%</td><td>1.5–1.8x</td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="4">Indicative only. IRR/MOIC ranges are pre-feasibility estimates and depend on the GFA/ASP assumptions flagged throughout this document.</td></tr></tfoot>
+    </table>
+  </div>
+  <div class="swipe-hint">← swipe to view full table →</div>
+
+  <div class="callout callout-gold" style="margin-top:18px;">
+    <div class="callout-title">Land-Upside Callout</div>
+    <div class="callout-body">Even under the Conservative feasibility case, the freehold riverfront comparable evidence (Section 05) supports the current land price on a pure comparable-sales basis — the residual land value gap is a <b>development execution risk</b>, not a land-pricing risk.</div>
+  </div>
+  <div class="callout callout-teal">
+    <div class="callout-title">Institutional Demand Card</div>
+    <div class="callout-body">The site's adjacency to Rajavej Chiang Mai Hospital and an existing Senior Wellness Center makes it a credible target for institutional wellness/hospitality operators and family offices seeking a licensed medical-tourism anchor asset in Northern Thailand.</div>
+  </div>
+</section>
+
+<!-- ============ 10 · RISK MATRIX ============ -->
+<section class="wrap">
+  <div class="section-label">10 · Risk Matrix</div>
+  <div class="section-title">Eight Risks, Assessed Plainly</div>
+  <div class="hairline"></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Risk</th><th>Severity</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Height Restriction vs. FAR Conflict</td><td style="color:#a3341f;">High</td><td>Underwrite off height-capped GFA (~38–46k Sq.m.), not the nominal 7:1 FAR</td></tr>
+        <tr><td>2</td><td>National EIA Trigger (&gt;10,000 Sq.m. GFA)</td><td style="color:#a3341f;">High</td><td>Budget 12–18 months for EIA approval; begin pre-consultation early</td></tr>
+        <tr><td>3</td><td>Ping River Flood Risk</td><td style="color:#a3341f;">High</td><td>Elevated ground-floor design, flood mitigation engineering, insurance costing</td></tr>
+        <tr><td>4</td><td>River Setback / Riparian Buffer</td><td style="color:var(--gold-light);">Medium</td><td>Confirm exact setback with Chiang Mai Public Works &amp; Irrigation Dept.</td></tr>
+        <tr><td>5</td><td>Land Area &amp; Price/Sq.Wah Discrepancy</td><td style="color:var(--gold-light);">Medium</td><td>Commission a formal land survey before final underwriting</td></tr>
+        <tr><td>6</td><td>Construction Cost Escalation</td><td style="color:var(--gold-light);">Medium</td><td>Lock GMP contract; stress-test at +10% in feasibility (Section 08)</td></tr>
+        <tr><td>7</td><td>Foreign Ownership &amp; Wellness/Medical Licensing</td><td style="color:var(--gold-light);">Medium</td><td>Structure JV/foreign quota early; separate healthcare licensing track</td></tr>
+        <tr><td>8</td><td>Zoning / City Plan Reclassification</td><td style="color:var(--green-light);">Low–Medium</td><td>Reconfirm Por.5-19 classification with City Planning Office pre-close</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="swipe-hint">← swipe to view full table →</div>
+</section>
+
+<!-- ============ 11 · LOCATION SHOWCASE ============ -->
+<section class="wrap">
+  <div class="section-label">11 · Location Showcase</div>
+  <div class="section-title">What Surrounds the Site</div>
+  <div class="hairline"></div>
+  <div class="loc-grid">
+    <div class="loc-card">
+      <div class="loc-name">Centara Riverside Hotel Chiang Mai</div>
+      <div class="loc-dist">Directly opposite the site</div>
+      <div class="score-row"><div class="score-track"><div class="score-fill" style="width:92%"></div></div><span class="score-num">9.2</span></div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-name">Senior Wellness Center Chiang Mai</div>
+      <div class="loc-dist">Adjacent to the site</div>
+      <div class="score-row"><div class="score-track"><div class="score-fill" style="width:90%"></div></div><span class="score-num">9.0</span></div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-name">Rajavej Chiang Mai Hospital</div>
+      <div class="loc-dist">Nearby, supports medical-tourism thesis</div>
+      <div class="score-row"><div class="score-track"><div class="score-fill" style="width:85%"></div></div><span class="score-num">8.5</span></div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-name">Ping River (Mae Ping)</div>
+      <div class="loc-dist">140m of direct frontage</div>
+      <div class="score-row"><div class="score-track"><div class="score-fill" style="width:96%"></div></div><span class="score-num">9.6</span></div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-name">Chiang Mai Old City &amp; Night Bazaar</div>
+      <div class="loc-dist">Short drive, established tourism core</div>
+      <div class="score-row"><div class="score-track"><div class="score-fill" style="width:80%"></div></div><span class="score-num">8.0</span></div>
+    </div>
+    <div class="loc-card">
+      <div class="loc-name">Chiang Mai International Airport</div>
+      <div class="loc-dist">Within the metro catchment</div>
+      <div class="score-row"><div class="score-track"><div class="score-fill" style="width:78%"></div></div><span class="score-num">7.8</span></div>
+    </div>
+  </div>
+  <div class="callout callout-gold" style="margin-top:18px;">
+    <div class="callout-title">Developer Demand Thesis</div>
+    <div class="callout-body">Few Chiang Mai riverfront parcels combine 140m of unbroken freehold frontage with direct adjacency to an established international hotel operator (Centara) and an existing wellness/medical ecosystem (Senior Wellness Center, Rajavej Hospital) — a rare pre-validated setting for a medical-tourism-anchored residential concept.</div>
+  </div>
+</section>
+
+<!-- ============ 12 · DEAL BOX ============ -->
+<section class="wrap">
+  <div class="deal-box">
+    <div class="deal-headline">"140 metres of freehold Ping River frontage, priced at the exact level of the nearest riverfront comparable — the opportunity is real, but only if the height-capped development math is underwritten honestly."</div>
+    <div class="ask-wrap">
+      <div class="ask-label">Asking Price</div>
+      <div class="ask-price">฿425,000,000</div>
+      <div class="ask-sub">฿100,000 / Sq.Wah (seller-stated) · Base Case RLV ฿599M (+41% cushion)</div>
+    </div>
+    <div class="deal-thesis">
+      <p>This is a rare single-titled, freehold riverfront holding in a submarket where comparable land rarely trades in blocks of this size. The direct Wat Ket comparable at an identical ฿100,000/Sq.Wah gives strong comparable-sales support for the asking price independent of any development assumptions.</p>
+      <p>The development case is real but execution-dependent: the 12-metre height restriction means the site's value is unlocked through a low-rise, high-ASP villa and branded-residence product — not a high-density tower — which happens to match the requested Pool Villa + Branded Residence + Wellness concept well.</p>
+      <p>Buyers should commission a land survey, an EIA pre-consultation, and a dedicated market feasibility study before final commitment — the Conservative case in Section 08 does not clear the asking price, and that gap should inform negotiation, not be glossed over.</p>
+    </div>
+    <div class="pill-row">
+      <span class="pill">Freehold Chanote</span>
+      <span class="pill">140m River Frontage</span>
+      <span class="pill">18,196 Sq.m.</span>
+      <span class="pill">FAR 7:1</span>
+      <span class="pill">Red Por.5-19</span>
+      <span class="pill">Opposite Centara Riverside</span>
+      <span class="pill">Adjacent Rajavej Hospital</span>
+      <span class="pill">Wellness-Ready Positioning</span>
+      <span class="pill">Comp-Matched Pricing</span>
+      <span class="pill">Single Titled Plot</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 · CONTACT FOOTER ============ -->
+<div class="contact-strip">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-name">Monthon Mahakijdumrongnukul</div>
+        <div class="contact-role">Advisor, Joe Collection</div>
+      </div>
+      <div>
+        <div class="contact-line">+66 80-657-8387</div>
+        <div class="contact-line">joecollection.m@gmail.com</div>
+      </div>
+      <div>
+        <div class="wordmark">JOE COLLECTION</div>
+        <a class="link-btn" href="https://joecollection.github.io/joecollection-portfolio/" target="_blank" rel="noopener">Full Investment &amp; Asset Analysis <span class="arrow">→</span></a>
+        <a class="link-btn" href="https://joecollection.github.io/asset/" target="_blank" rel="noopener">Explore More Premium Assets <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 14 · DISCLAIMER ============ -->
+<div class="disclaimer">
+  This document is prepared by Joe Collection for confidential investor discussion purposes only and does not constitute an offer, solicitation, or investment advice. Land area, zoning, FAR, height restriction, tenure, and price figures are based on seller-provided information and have not been independently verified; a formal land survey and Chiang Mai City Planning Office confirmation are required before reliance. GDV, RLV, IRR, and MOIC figures are indicative pre-feasibility estimates only and are not guaranteed. EIA approval, wellness/medical facility licensing, and final entitlements are subject to regulatory review and are not guaranteed. Sources referenced include Dot Property, Thailand-Property, FazWaz, Knight Frank, Hipflat, and general Chiang Mai market reporting. Data as at August 2026. THB/USD reference rate approximately ฿33–35 per USD, subject to change.
+</div>
+
+</body>
+</html>
